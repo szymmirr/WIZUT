@@ -1,0 +1,47 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #                Tablice                 #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+echo
+echo "Podaj ilosc liczb"
+read a
+let p=0
+let n=0
+echo "Podaj liczby"
+while [ $a -gt 0 ]
+do
+read x
+let y=$x%2
+if [ $y -eq 0 ]
+then
+let tp[$p]=$x
+let p=$p+1
+else
+let tn[$n]=$x
+let n=$n+1
+fi
+let a=$a-1
+done
+echo "Liczby parzyste to:"
+echo ${tp[*]}
+echo "Liczby nieparzyste to:"
+echo ${tn[*]}
+
+
+
+

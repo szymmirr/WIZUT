@@ -1,0 +1,40 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #          Obliczanie n silnia           #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)     #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+if [ "$1" = "" ]
+then
+echo "Aby uruchomic ten skrypt nalezy wpisac: bash silnia-parametr <liczba>, gdzie dla liczby zostanie obliczona silnia, np. bash silnia-parametr 5"
+exit
+fi
+if [ $1 -lt 0 ]
+then
+echo "Liczba musi byc naturalna"
+exit
+fi
+let w=1
+let p=0
+while [ $1 -ne $p ]
+do
+let p=$p+1
+let w=$w*$p
+done
+echo "$1!=$w"
+echo
+echo
+

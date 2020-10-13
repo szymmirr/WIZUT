@@ -1,0 +1,18 @@
+#!/bin/bash
+
+for liczba in $@
+do
+if ["$liczba" == ""]
+then 
+brak
+fi
+let m=$liczba%2
+if [ $m -eq 0 ]
+then
+echo "$liczba jest parzysta "
+elif [ $m -ne 0 ]
+then
+echo " $liczba jest nieparzysta "
+fi 
+done
+ 

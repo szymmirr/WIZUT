@@ -1,0 +1,51 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #       Najwieksza liczba parzysta       #"
+echo "                 #         i suma liczb parzystych        #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+echo
+echo "Program podaje najwieksza liczbe parzysta oraz sume liczb parzystych sposrod podanych liczb dodatnich."
+echo "Podaj liczby: "
+echo
+let suma=0
+let maks=0
+while [ 1 ]
+do
+	read a
+	if [ $a -lt 0 ]
+	then
+		break
+	fi
+	let r=$a%2
+	if [ $r -eq 0 ]
+	then
+		let suma=$suma+$a
+		if [ $a -gt $maks ]
+		then
+			let maks=$a
+		fi
+	fi
+done
+echo "Najwieksza liczba parzysta to: "$maks
+echo "Suma liczb parzystych wynosi: "$suma
+echo
+echo
+
+
+
+

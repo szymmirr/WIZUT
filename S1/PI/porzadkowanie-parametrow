@@ -1,0 +1,28 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #         Porzadkowanie parametrow       #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+echo "Parametr 1: " $1 
+echo "Parametr 2: " $2
+echo "Parametr 3: " $3
+echo "Parametr 0: " $0
+tab=($@)
+echo ${tab[*]}
+echo
+
+

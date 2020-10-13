@@ -1,0 +1,44 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #         Zamiana liczby oktalnej        #"
+echo "                 #            na dziesietna               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+echo
+echo "Podaj liczbe w systemie oktalnym"
+read a
+let p=1
+let s=0
+let q=0
+while [ $a -ne 0 ]
+do
+let r=$a%10
+if [ $r -gt 7 ]
+then
+echo "Podana liczba nie jest liczba oktalna"
+let q=1
+fi
+let a=$a/10
+let s=$s+$r*p
+let p=$p*8
+done
+if [ $q -eq 0 ]
+then
+echo "Liczba w systemie dziesietnym wynosi $s"
+fi
+
+

@@ -1,0 +1,44 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #               Kalkulator               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)     #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+echo
+echo "Podaj a"
+read a
+echo "Podaj b"
+read b
+echo "Podaj dzialanie (+, -, *, /)"
+read d
+case "$d" in
+"+")
+let w=$a+$b
+echo "$a+$b=$w";;
+"-")
+let w=$a-$b
+echo "$a-$b=$w";;
+"*")
+let w=$a*$b
+echo "$a*$b=$w";;
+"/")
+let w=$a/$b
+let r=$a%$b
+echo "$a/$b=$w,$r";;
+*)
+echo "Podales zly operator"
+esac
+

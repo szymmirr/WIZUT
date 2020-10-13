@@ -1,0 +1,54 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #            Liczby parametr             #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)     #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+#napisac skrypt ktory policzy ile razy kazda z podanych jako parametr liczb wystepuje w zbiorze zapisanym w pliku o nazwie baza. wynik drukować w postaci x y
+
+if [ "$1" = "" ]
+then
+echo "Aby uruchomic ten skrypt nalezy podac parametry"
+exit
+fi
+par=($@)
+for z in $(cat baza)
+do
+let tablica2[$i]=$z
+let i=i+1
+done
+rozmiar1=${#par[@]}
+rozmiar2=${#tablica2[@]}
+echo ${par[*]}
+echo ${tablica2[*]}
+for (( i=0; $i<$rozmiar1; i=i+1 ))
+do
+wynik=0
+for (( j=0; $j<$rozmiar2; j=j+1 ))
+do
+let a=par[$i]
+let b=tablica2[$j]
+if [ $a = $b ]
+then
+let wynik=$wynik+1
+fi
+done
+echo -n ${par[$i]} " "
+echo $wynik
+done
+
+
+

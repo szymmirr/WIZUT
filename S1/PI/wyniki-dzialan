@@ -1,0 +1,34 @@
+#!/bin/bash
+echo " "
+echo " "
+echo " "
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #                 Tytul                  #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #      $(date)    #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo " "
+echo " "
+echo " "             
+
+
+let x=155
+let y=111
+let w=$y+$x
+let ilo1=$x/33
+let ilo2=33/8
+echo "Wynik dodawania" $y+$x=$w
+echo "Wynik dzielenia" $x/33=$ilo1
+echo "Wynik dzielenia" 33/8=$ilo2
+echo ""
+echo ""
+
+

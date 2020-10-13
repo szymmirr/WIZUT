@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mkdir katG #tworzenie katalogu
+cd katG #przejscie do katalogu
+mkdir A B
+cd A
+touch plik1 plik2 #tworzenie pliku
+cd ../ #przejscie katalog wyzej
+cd B
+touch plik4 plik5
+mkdir C D
+cd D
+touch plik6
+

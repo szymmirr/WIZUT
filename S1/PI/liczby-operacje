@@ -1,0 +1,70 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #            Liczby operacje             #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+#skrypt ktory wykona operacje na zbiorach liczb zawartych w plikach zd1 i zd2. skrypt w zbiorze wiekszym zastapi pierwsza czesc tego zbioru liczbami ze zbioru mniejszego
+i=0
+for z in $(cat zd1)
+do
+let tablica1[$i]=$z
+let i=i+1
+done
+j=0
+for z in $(cat zd2)
+do
+let tablica2[$j]=$z
+let j=j+1
+done
+n1=${#tablica1[@]}
+n2=${#tablica2[@]}
+
+if [ $n2 -lt $n1 ]
+then
+echo -n >zd1
+for (( i=0; $i<=$n1; i=$i+1 ))
+do
+if [ $i -lt $n2 ]
+then
+echo -n "${tablica2[$i]} ">>zd1
+fi
+if [ $i -ge $n2 ]
+then
+echo -n "${tablica1[$i]} ">>zd1
+fi
+done
+fi
+
+if [ $n1 -lt $n2 ]
+then
+echo -n >zd2
+for (( i=0; $i<=$n2; i=$i+1 ))
+do
+if [ $i -lt $n1 ]
+then
+echo -n "${tablica1[$i]} ">>zd2
+fi
+if [ $i -ge $n1 ]
+then
+echo -n "${tablica2[$i]} ">>zd2
+fi
+done
+fi
+
+exit
+
+

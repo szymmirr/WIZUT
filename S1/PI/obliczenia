@@ -1,0 +1,26 @@
+#!/bin/bash
+echo "Start"
+echo "Wyniki 1:"
+let x=-25
+let dod=0
+while [ $x -le 25 ]
+do
+let t=$x**3
+let d=$x*$x
+let f=$t+$d+5
+echo $x $f " "
+if [ $x -eq -5 ]
+then
+let x=0
+fi
+if [ $f -gt 0 ]
+then
+let dod=$dod+$f
+fi
+let x=$x+5
+done
+echo "Wynik 2: "$dod
+echo "Koniec"
+
+
+

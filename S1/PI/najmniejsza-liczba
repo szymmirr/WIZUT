@@ -1,0 +1,50 @@
+#!/bin/bash
+echo " "
+echo " "
+echo " "
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     Znajdowanie najmniejszej liczby    #"
+echo "                 #              z 3 podanych              #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)    #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo " "
+echo " "
+echo " "
+
+
+echo -n "Podaj liczbe a "
+read a
+echo -n "Podaj liczbe b "
+read b
+echo -n "Podaj liczbe c "
+read c
+if [ $a -lt $b ]
+	then
+	if [ $a -lt $c ]
+		then
+		echo "Liczba a- "$a "jest najmniejsza"
+		exit
+		else
+		echo "Liczba c- "$c "jest najmniejsza"
+		exit
+	fi
+else
+if [ $b -lt $c ]
+	then
+	echo "Liczba b- "$b "jest najmniejsza"
+	exit
+	else
+	echo "Liczba c- "$c "jest najmniejsza"
+	exit
+fi
+fi
+

@@ -1,0 +1,66 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #             Zaliczenie 4               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)     #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+#napisac skrypt uruchamiany z 3 parametrami gdzie pierwszy i drugi to nazwy plików zawierających zbiory źródłowe liczb, a trzeci jest nazwą zbioru wynikowego. zadaniem skryptu jest utworzyć plik wynikowy zawierający wszystkie liczby z obu plików źródłowych uporządkowane malejąco
+
+if [ "$1" = "" ]
+then
+echo "Skypt nalezy uruchomic z trzema parametrami. Prosze wpisac bash mirr4 <nazwa pierwszego pliku zrodlowego> <nazwa drugiego pliku zrodlowego> <nazwa pliku wynikowego>."
+exit
+fi
+
+i=0
+for z in $(cat $2)
+do
+let tablica[$i]=$z
+let i=$i+1
+done
+
+for x in $(cat $1)
+do
+let tablica[$i]=$x
+let i=$i+1
+done
+
+echo ${tablica[*]}
+#echo ${tablica[*]}>>$3
+
+let rozmiar=${#tablica[@]}
+
+
+
+for (( i=0; i<$rozmiar; i=$i+1 ))
+do
+for (( j=$i; j<$rozmiar; j=$j+1 ))
+do
+if [ ${tablica[$i]} -lt ${tablica[$j]} ]
+then
+tx=${tablica[$i]}
+tablica[$i]=${tablica[$j]}
+tablica[$j]=$tx
+fi
+done
+done
+
+echo ${tablica[*]}
+echo ${tablica[*]}>>$3
+echo
+
+
+

@@ -1,0 +1,56 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #             Funkcja silnia             #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+function silnia
+{
+for (( x=$n_pocz; $x <= $n_kon; x=$x+1 ))
+do
+let w=1
+let p=0
+let x2=$x+1
+while [ $x2 -ne $p ]
+do
+let p=$p+1
+let w=$w*$p
+done
+
+let w2=1
+let p=0
+while [ $x -ne $p ]
+do
+let p=$p+1
+let w2=$w2*$p
+done
+let wynik=$w-$w2
+echo "$x2!-$x!=$wynik"
+done
+}
+
+
+echo "Podaj n poczatkowe"
+read n_pocz
+echo "Podaj n koncowe"
+read n_kon
+echo
+silnia $n_pocz $n_kon
+echo
+
+
+
+

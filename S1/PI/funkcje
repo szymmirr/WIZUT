@@ -1,0 +1,63 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #                Funkcje                 #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+function nag
+{
+echo "........................"
+echo "..... wyniki nr $1 ......"
+echo "........................"
+echo
+    
+}
+function fu1
+{
+for (( x=$1; $x <= $2; x=$x+$3 ))
+do
+let y=$a*$x**4+$b*$x+$c
+echo $x"          "$y
+done
+}
+
+function fu2
+{
+for (( x=$1; $x <= $2; x=$x+$3 ))
+do
+let y=$a*$x*$x+$c
+echo $x"          "$y
+done
+}
+
+let n=1
+let a=2
+let b=3
+let c=25
+nag $n
+fu1 0 10 2
+let n=$n+1
+nag $n
+fu2 0 10 2
+nag 3
+fu2 10 10 10
+let a=1
+nag 4
+fu1 0 10 1
+
+
+
+

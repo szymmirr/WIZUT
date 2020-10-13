@@ -1,0 +1,30 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #           Dzielenie 4 miejsca          #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+echo
+echo "podaj a"
+read a
+echo "podaj b"
+read b
+let wynik=a/b
+let reszta=a%b
+echo "wynik: $wynik.$reszta"
+
+
+

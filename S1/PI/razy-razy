@@ -1,0 +1,5 @@
+#!/bin/bash
+let x=5
+let t=$x**3
+echo $t
+

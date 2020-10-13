@@ -1,0 +1,40 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #          Obliczanie n silnia           #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)     #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+while [ 1 ]
+do
+echo "Podaj liczbe"
+read n
+if [ $n -lt 0 ]
+then
+echo "Liczba musi byc naturalna"
+exit
+fi
+let w=1
+let p=0
+while [ $n -ne $p ]
+do
+let p=$p+1
+let w=$w*$p
+done
+echo "$n!=$w"
+echo
+echo
+done
+

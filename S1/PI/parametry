@@ -1,0 +1,41 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #             Obszar pliku               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+let x=$1
+let y=$2
+let i=1
+for z in $(cat plikC)
+do
+let tablica[$i]=$z
+let i=i+1
+done
+let n=${#tablica[@]}
+if [ $y -gt $n ]
+then
+echo "Zbior ma za malo elementow"
+exit
+fi
+while [ $x -le $y ]
+do
+echo ${tablica[$x]}
+let suma=$suma+${tablica[$x]}
+let x=$x+1
+done
+echo "suma: " $suma
+

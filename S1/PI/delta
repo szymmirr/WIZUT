@@ -1,0 +1,41 @@
+#!/bin/bash
+echo " "
+echo " "
+echo " "
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #         Obliczanie y=ax2+bx+c/a        #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)    #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo " "
+echo " "
+echo " "    
+
+echo -n "Podaj liczbe a "
+read a
+echo -n "Podaj liczbe b "
+read b
+echo -n "Podaj liczbe c "
+read c
+echo -n "Podaj liczbe x "
+read x
+if [ $a -eq 0 ]
+then
+echo "UWAGA BLAD! liczba a nie moze byc zerem"
+echo
+echo
+exit
+fi
+let y=$a*$x*$x+$b*$x+$c/$a
+echo "Wynik: "$a$x2$y+$b$x+$c/$a=$y
+echo
+echo
+

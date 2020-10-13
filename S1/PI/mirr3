@@ -1,0 +1,39 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #         Zadanie kontrolne nr 3         #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)     #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+if [ "$1" = "" ]
+then
+echo "Skypt nalezy uruchomic z czterema parametrami. Prosze wpisac bash mirr3 <nazwa pliku zrodlowego> <nazwa pliku wynikowego> <a> <b>, gdzie a i b to poczatek i koniec zakresu poszukiwanych liczb."
+exit
+fi
+i=0
+for z in $(cat $1)
+do
+let tablica[$i]=$z
+let i=i+1
+done
+
+for (( i=$3-1; $i<$4; i=$i+1 ))
+do
+echo -n "${tablica[$i]} ">>$2
+done
+
+echo
+echo
+

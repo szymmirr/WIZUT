@@ -1,0 +1,40 @@
+#!/bin/bash
+echo " "
+echo " "
+echo " "
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #          Tabelaryzacja funkcji         #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)    #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+echo
+echo "Obliczanie funkcji y=ax3+bx w zakresie od c do d co krok k"
+echo "Podaj a"
+read a
+echo "Podaj b"
+read b
+echo "Podaj c"
+read c
+echo "Podaj d"
+read d
+echo "Podaj k"
+read k
+echo "x    y"
+let x=$c
+while [ $x -le $d ]
+do
+let y=$a*$x*$x*$x+$b*$x
+echo $x"    "$y
+let x=$x+$k
+done
+

@@ -1,0 +1,40 @@
+#!/bin/bash
+echo " "
+echo " "
+echo " "
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #   Obliczanie NWD (Algorytm Euklidesa)  #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)    #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+echo
+#1. dane sa dwie niezerowe liczby naturalne
+#2. dopoki liczby a i b nie sa sobie rowne powtarzaj krok 3, w przeciwnym razie przejdz do kroku 4
+#3. od wiekszj liczby odejmij mniejsza i te wieksza zastap otrzymana roznica
+#4. wyprowadz wynik nwd=a
+
+echo "Podaj niezerowa liczbe a"
+read a
+echo "Podaj niezerowa liczbe b"
+read b
+while [ $a -ne $b ]
+do 
+if [ $a -gt $b ]
+then
+let a=$a-$b
+else
+let b=$b-$a
+fi
+done
+echo "NWD wynosi "$a
+

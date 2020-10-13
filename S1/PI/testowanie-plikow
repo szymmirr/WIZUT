@@ -1,0 +1,30 @@
+#!/bin/bash
+echo
+echo
+echo
+echo "                 ##########################################"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #              Szymon Mirr               #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #           Testowanie plikow            #"
+echo "                 #                                        #"
+echo "                 #                                        #"
+echo "                 #     $(date)      #"
+echo "                 #                                        #"
+echo "                 #                                        #"  
+echo "                 ##########################################" 
+echo
+echo
+t=(33,99,100,7,3,1)
+echo ${t[*]}>plikA
+echo ${t[*]}>>plikB
+let i=1
+for x in $(cat plikC)
+do
+let tablica[$i]=$x
+let i=i+1
+done
+echo ${tablica[*]}
+

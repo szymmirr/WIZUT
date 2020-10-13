@@ -1,0 +1,24 @@
+#!/bin/bash
+
+let tablica[0]=6
+let tablica[1]=5
+let tablica[2]=1
+let tablica[3]=9
+let tablica[4]=2
+
+let rozmiar=${tablica[@]}
+
+for (( i=0; $i<$rozmiar; i=$i+1 ))
+do
+
+if [ ${tablica[$i]} -gt ${tablica[$i+1]} ]
+then
+tx=${tablica[$i]}
+tablica[$i]=${tablica[$j]}
+tablica[$j]=$tx
+fi
+done
+
+echo ${tablica[*]}
+
+
