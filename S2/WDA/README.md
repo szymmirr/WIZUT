@@ -1,4 +1,4 @@
-# Wstêp do Algorytmizacji
+# WstÄ™p do Algorytmizacji
 
 ![Skazani na niezaliczenie](https://user-images.githubusercontent.com/12998256/96026145-6afeec80-0e56-11eb-8f81-078d8ae71261.JPG)
 
