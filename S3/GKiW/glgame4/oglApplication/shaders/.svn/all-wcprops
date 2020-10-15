@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/shaders
+END
+color.ps
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/shaders/color.ps
+END
+tmo.ps
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/shaders/tmo.ps
+END
+texture.ps
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/shaders/texture.ps
+END
+color.vs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/shaders/color.vs
+END
+tmo.vs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/shaders/tmo.vs
+END
+texture.vs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/shaders/texture.vs
+END

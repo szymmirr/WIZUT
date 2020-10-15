@@ -1,0 +1,461 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail
+END
+func_geometric.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_geometric.hpp
+END
+func_trigonometric.inl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_trigonometric.inl
+END
+type_int.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_int.hpp
+END
+func_trigonometric.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_trigonometric.hpp
+END
+type_vec.inl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec.inl
+END
+func_matrix.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_matrix.inl
+END
+type_mat3x2.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat3x2.inl
+END
+type_mat3x3.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat3x3.inl
+END
+type_mat3x4.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat3x4.inl
+END
+_fixes.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/_fixes.hpp
+END
+type_vec.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec.hpp
+END
+func_matrix.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_matrix.hpp
+END
+type_mat3x2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat3x2.hpp
+END
+type_mat3x3.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat3x3.hpp
+END
+type_mat3x4.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat3x4.hpp
+END
+precision.inl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/precision.inl
+END
+intrinsic_vector_relational.inl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_vector_relational.inl
+END
+type_vec1.inl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec1.inl
+END
+precision.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/precision.hpp
+END
+type_vec2.inl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec2.inl
+END
+func_exponential.inl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_exponential.inl
+END
+type_vec3.inl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec3.inl
+END
+type_vec4.inl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec4.inl
+END
+intrinsic_vector_relational.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_vector_relational.hpp
+END
+func_common.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_common.inl
+END
+type_vec1.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec1.hpp
+END
+type_vec2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec2.hpp
+END
+func_exponential.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_exponential.hpp
+END
+type_vec3.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec3.hpp
+END
+type_vec4.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_vec4.hpp
+END
+func_common.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_common.hpp
+END
+intrinsic_exponential.inl
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_exponential.inl
+END
+type_half.inl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_half.inl
+END
+intrinsic_exponential.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_exponential.hpp
+END
+_vectorize.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/_vectorize.hpp
+END
+type_half.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_half.hpp
+END
+intrinsic_matrix.inl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_matrix.inl
+END
+func_packing.inl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_packing.inl
+END
+func_noise.inl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_noise.inl
+END
+intrinsic_matrix.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_matrix.hpp
+END
+func_packing.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_packing.hpp
+END
+func_noise.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_noise.hpp
+END
+intrinsic_geometric.inl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_geometric.inl
+END
+intrinsic_geometric.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_geometric.hpp
+END
+intrinsic_trigonometric.inl
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_trigonometric.inl
+END
+func_integer.inl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_integer.inl
+END
+intrinsic_common.inl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_common.inl
+END
+intrinsic_trigonometric.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_trigonometric.hpp
+END
+type_gentype.inl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_gentype.inl
+END
+func_integer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_integer.hpp
+END
+type_mat2x2.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat2x2.inl
+END
+intrinsic_integer.inl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_integer.inl
+END
+intrinsic_common.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_common.hpp
+END
+type_mat2x3.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat2x3.inl
+END
+type_mat2x4.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat2x4.inl
+END
+type_mat4x2.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat4x2.inl
+END
+type_gentype.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_gentype.hpp
+END
+type_mat4x3.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat4x3.inl
+END
+type_mat4x4.inl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat4x4.inl
+END
+type_mat.inl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat.inl
+END
+type_mat2x2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat2x2.hpp
+END
+intrinsic_integer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/intrinsic_integer.hpp
+END
+type_mat2x3.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat2x3.hpp
+END
+type_mat4x2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat4x2.hpp
+END
+type_mat2x4.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat2x4.hpp
+END
+type_mat4x3.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat4x3.hpp
+END
+type_mat.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat.hpp
+END
+func_vector_relational.inl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_vector_relational.inl
+END
+type_mat4x4.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_mat4x4.hpp
+END
+dummy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/dummy.cpp
+END
+func_vector_relational.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_vector_relational.hpp
+END
+setup.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/setup.hpp
+END
+hint.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/hint.hpp
+END
+type_float.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/type_float.hpp
+END
+glm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/glm.cpp
+END
+func_geometric.inl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/glm/detail/func_geometric.inl
+END

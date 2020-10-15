@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp
+END
+material.inl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/material.inl
+END
+mesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/mesh.h
+END
+matrix3x3.inl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/matrix3x3.inl
+END
+scene.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/scene.h
+END
+matrix4x4.inl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/matrix4x4.inl
+END
+importerdesc.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/importerdesc.h
+END
+texture.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/texture.h
+END
+Importer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/Importer.hpp
+END
+color4.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/color4.h
+END
+types.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/types.h
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/config.h
+END
+light.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/light.h
+END
+Exporter.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/Exporter.hpp
+END
+cfileio.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/cfileio.h
+END
+IOSystem.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/IOSystem.hpp
+END
+vector2.inl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/vector2.inl
+END
+Logger.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/Logger.hpp
+END
+vector3.inl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/vector3.inl
+END
+IOStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/IOStream.hpp
+END
+DefaultLogger.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/DefaultLogger.hpp
+END
+quaternion.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/quaternion.h
+END
+LogStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/LogStream.hpp
+END
+color4.inl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/color4.inl
+END
+material.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/material.h
+END
+ProgressHandler.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/ProgressHandler.hpp
+END
+matrix3x3.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/matrix3x3.h
+END
+matrix4x4.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/matrix4x4.h
+END
+ai_assert.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/ai_assert.h
+END
+NullLogger.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/NullLogger.hpp
+END
+cimport.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/cimport.h
+END
+quaternion.inl
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/quaternion.inl
+END
+defs.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/defs.h
+END
+postprocess.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/postprocess.h
+END
+anim.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/anim.h
+END
+cexport.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/cexport.h
+END
+vector2.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/vector2.h
+END
+vector3.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/vector3.h
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/version.h
+END
+camera.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/rmnp/!svn/ver/295/glgame_new/oglApplication/3rd/Assimp/include/assimp/camera.h
+END
