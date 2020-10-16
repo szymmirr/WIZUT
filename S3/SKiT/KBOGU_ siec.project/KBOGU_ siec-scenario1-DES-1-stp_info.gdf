@@ -1,0 +1,8 @@
+# This file is an output of a discrete event simulation.
+# It contains spanning tree information to be parsed while
+# visualizing the spanning tree using the Protocols->STP menu.
+# Legend: node name, VID, VLAN/tree name, port/node type, link name.
+Campus Network.S1.SW_1,0,Common ST,root,none
+Campus Network.S1.SW_1,0,Common ST,designated_port,Campus Network.S1.SW_1 <-> k_1_1
+Campus Network.S1.SW_1,0,Common ST,designated_port,Campus Network.S1.s_1_Email <-> SW_1
+Campus Network.S1.SW_1,0,Common ST,designated_port,Campus Network.S1.r_1 <-> SW_1
