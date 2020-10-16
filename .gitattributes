@@ -1,1 +1,5 @@
+*.ps linguist-language=C++
+*.m linguist-language=MATLAB
+
 S3/GKiW/glgame4/oglApplication/3rd/* linguist-vendored
+S3/SKiT/KBOGU_ siec.project/* linguist-vendored
