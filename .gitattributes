@@ -1,5 +1,7 @@
 S3/GKiW/glgame4/oglApplication/3rd/* linguist-vendored
 S3/SKiT/* linguist-vendored
+stdafx.cpp linguist-generated
+stdafx.h linguist-generated
 
 *.ps linguist-language=C++
 *.m linguist-language=MATLAB
