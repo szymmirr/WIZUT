@@ -1,0 +1,23 @@
+#!/bin/bash
+i=$1
+j=$1
+k=$1
+while [ $i -ne 0 ]
+do
+let j=$i
+while [ $j -ne 0 ]
+do
+echo -n " "
+let j=$j-1
+done
+let k=1
+while [ $k -ne $i ]
+do
+echo -n "*"
+echo " "
+let k=$k+1
+done
+let i=$i-1
+done
+
+

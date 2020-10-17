@@ -1,0 +1,10 @@
+#!/bin/bash
+rozmiar=$( du -b $1 | cut -f1 )
+rozmiar2=$( du -b $1 | cut -f1 )
+echo $rozmiar
+while [ "$rozmiar" -eq "$rozmiar2" ]
+do
+rozmiar2=$( du -b $1 | cut -f1 ) 
+done
+echo "Zmienil sie rozmiar"
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $1 < 3 ]
+then
+echo Wynik: 1
+else
+echo ./zad2 $1-2+./zad2 $1-1
+fi
+

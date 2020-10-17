@@ -1,0 +1,8 @@
+#!/bin/bash
+let n=60
+while n -eq 60
+do 
+watch -n 10 ps -Al | grep -c bash
+let n=n-1
+done
+

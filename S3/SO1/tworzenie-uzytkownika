@@ -1,0 +1,41 @@
+#!/bin/bash
+
+echo "Podaj imie: "
+read imie
+
+echo "Podaj nazwisko: "
+read nazwisko
+
+echo "Podaj haslo: "
+read haslo
+
+username=${imie:0:1}
+username="$username$nazwisko"
+username=$(echo $username | tr [:upper:] [:lower:])
+echo $username
+
+zmienna=$(ldapsearch -x -LLL uidnumber | grep "uidNumber" | cut -d" " -f2 | sor$
+echo $zmienna
+zmienna=$[$zmienna+1]
+
+echo "dn: cn="$username",dc=lab,dc=pl" > ldap
+echo "cn: "$username >> ldap
+echo "gidNumber: 100" >> ldap
+echo "homeDirectory: /home/"$username >> ldap
+echo "objectClass: person" >> ldap
+echo "objectClass: posixAccount" >> ldap
+echo "objectClass: simpleSecurityObject" >> ldap
+echo "objectClass: top" >> ldap
+echo "sn: "$nazwisko >> ldap
+echo "uid: "$username >> ldap
+echo "uidNumber: "$zmienna >> ldap
+echo "userpassword: "$haslo >> ldap
+
+ldapmodify -a -x -D cn=admin,dc=lab,dc=pl -W -f ldap
+
+if [ "$?" = "0" ]
+  then
+        mkdir /home/$username
+        chmod 700 /home/$username
+        chown $zmienna:100 /home/$username
+fi

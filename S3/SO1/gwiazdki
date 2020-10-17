@@ -1,0 +1,10 @@
+#!/bin/bash
+for (( i=0; $i<=2; let i=$i+1 ))
+do
+for (( j=0; $j<="$1"; let j=$j+2 ))
+do
+echo "*"
+let j=$j+2
+done
+done
+
