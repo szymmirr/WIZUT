@@ -1,5 +1,9 @@
-S3/GKiW/glgame4/oglApplication/3rd/* linguist-vendored
-S3/SKiT/* linguist-documentation
+*/3rd/* linguist-vendored
+*/freeglut/* linguist-vendored
+*/3rd_party/* linguist-vendored
+
+*/SKiT/* linguist-documentation
+
 stdafx.cpp linguist-generated
 stdafx.h linguist-generated
 targetver.h linguist-generated
