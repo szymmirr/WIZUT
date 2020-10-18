@@ -4,6 +4,7 @@ S4/GK/GKiW_Lab3/freeglut/* linguist-vendored
 S4/GK/GKiW_Lab4/freeglut/* linguist-vendored
 S4/GK/GKiW_Lab5/3rd_party/* linguist-vendored
 S4/GK/GKiW_Lab6/3rd_party/* linguist-vendored
+*.h linguist-vendored
 
 S3/SKiT/* linguist-documentation
 
