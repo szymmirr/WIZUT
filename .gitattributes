@@ -1,4 +1,5 @@
 S3/GKiW/glgame4/oglApplication/3rd/* linguist-vendored
+S3/GKiW/glgame4/oglApplication/shaders/* linguist-vendored
 S4/GK/GKiW_Lab2/freeglut/* linguist-vendored
 S4/GK/GKiW_Lab3/freeglut/* linguist-vendored
 S4/GK/GKiW_Lab4/freeglut/* linguist-vendored
@@ -10,5 +11,4 @@ S3/SKiT/* linguist-documentation
 stdafx.cpp linguist-generated
 *.h linguist-generated
 
-*.ps linguist-language=C++
 *.m linguist-language=MATLAB
