@@ -1,3 +1,6 @@
 [submodule "S4/GK/Zombie-Annihilator"]
 	path = S4/GK/Zombie-Annihilator
 	url = https://github.com/szymmirr/Zombie-Annihilator
+[submodule "S4/IO/Zabka"]
+	path = S4/IO/Zabka
+	url = https://github.com/szymmirr/Zabka
