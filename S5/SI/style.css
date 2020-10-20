@@ -1,0 +1,89 @@
+#wszystko {background-color: white;
+	position: absolute;
+	top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+border: blue;
+}
+#naglowek {background-color: gray;
+	position: absolute;
+	top: 10px;
+    right: 10px;
+    left: 10px;
+}
+#lewo {position: absolute;
+	background-color: white;
+	top: 100px;
+    left: 10px;
+    width: 180px;
+}
+#prawo {background-color: yellow;
+position: absolute;
+    top: 100px;
+    right: 10px;
+    width: 180px;
+    height: 200px;
+}
+#srodek {background-color: yellow;
+position: absolute;
+left: 200px;
+right: 200px;
+top: 100px;
+}
+
+#stopka {background-color: gray;
+position: absolute;
+	bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+#lewolinki {list-style: none;
+position: relative;
+padding: 0px;
+left: 0px;}
+
+
+#prawolinki {list-style: circle;
+position: relative;
+padding: 10px;
+left: 20px;}
+
+
+#linklewo {display: block;
+background-color: yellow;
+color: black;
+text-decoration: none;
+width: 150px;
+padding: 5px;
+left: 10px;
+border: 1px solid;
+}
+
+label {
+  display: inline-block;
+  width: 160px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+form div{
+  margin-top: 5px;
+}
+
+#button {
+  margin-left: 235px;
+}
+
+#plec{
+    position: absolute;
+    margin-left: 190px;
+    top: 130px;
+}
+
+#plecedit{
+    position: absolute;
+    margin-left: 250px;
+    top: 130px;
+}
