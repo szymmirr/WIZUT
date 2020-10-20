@@ -6,9 +6,22 @@ S4/GK/GKiW_Lab4/freeglut/* linguist-vendored
 S4/GK/GKiW_Lab5/3rd_party/* linguist-vendored
 S4/GK/GKiW_Lab6/3rd_party/* linguist-vendored
 
-S3/SKiT/* linguist-documentation
-
 stdafx.cpp linguist-generated
 *.h linguist-generated
+S4/SW/lab5last/lab5last.asm linguist-generated
+S4/SW/lab6_2/lab6_2.asm linguist-generated
+S4/SW/lab7c/lab7c.asm linguist-generated
+S4/SW/lab7jask/lab7jask.asm linguist-generated
+S4/SW/lab7timer/lab7timer.asm linguist-generated
+S4/SW/lab8/lab8.asm linguist-generated
+S4/SW/lab8dwa/lab8dwa.asm linguist-generated
+S4/SW/lab9/lab9.asm linguist-generated
+S4/SW/lcd/lcd.asm linguist-generated
+S4/SW/silnik/silnik.asm linguist-generated
+S4/SW/silnik2/silnik2.asm linguist-generated
+S4/SW/tajmerek/tajmerek.asm linguist-generated
+S4/SW/twojstary/twojstary.asm linguist-generated
+
+S3/SKiT/* linguist-documentation
 
 *.m linguist-language=MATLAB
