@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+<item>
+  <id>1</id>
+  <photo1>monitor.jpg</photo1>
+</item>
+<item>
+  <id>2</id>
+  <photo2>laptop.jpg</photo2>
+</item>
+<item>
+  <id>3</id>
+  <photo3>komputer.jpg</photo3>
+</item>
+<item>
+  <id>4</id>
+  <photo4>telewizor.jpg</photo4>
+</item>
+</note>

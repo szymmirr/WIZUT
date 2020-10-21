@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="walidacja.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="__jquery.tablesorter/jquery.tablesorter.js"></script> 
+	<script src="/js/jquery.tablesorter.widgets.js"></script>
+	<link rel="stylesheet" href="__jquery.tablesorter/themes/blue/style.css">
+	<script type="text/javascript">
+	var count=4;
+	
+	$(document).ready(function(){
+    //alert("JAN");
+  });
+  
+  function odpalaj() {
+    //alert("start");
+}
+	
+    $(document).ready(function() 
+	{ 
+		//alert("Jan");
+        $("table").tablesorter();
+		var x=document.getElementById("nazwa");
+		var val=x.value;
+		$("#ajax-append").click(function() { 
+         $.get("assets/ajax-content.html", function(html) { 
+             // append the "ajax'd" data to the table body 
+             $("table tbody").append(html); 
+            // let the plugin know that we made a update 
+            $("table").trigger("update"); 
+            // set sorting column and direction, this will sort on the first and third column 
+            var sorting = [[2,1],[0,0]]; 
+            // sort on the first column 
+            $("table").trigger("sorton",[sorting]); 
+        }); 
+        //return false; 
+    }); 
+	
+	
+	}
+);
+
+$(function(){
+  $('table').tablesorter();
+
+  $('select').change(function(){
+    var precolumn = parseInt($(this).val(), 10),
+	  column = parseInt($(this).val(), 10),
+      direction = 1; // 0 = descending, 1 = ascending
+	  if(precolumn == 0)
+	  {
+		column = 2;
+		direction = 0;
+	  }
+	  if(precolumn == 1)
+	  {
+		column = 2;
+		direction = 1;
+	  }
+	  if(precolumn == 2)
+	  {
+		column = 7;
+		direction = 0;
+	  }
+	  if(precolumn == 3)
+	  {
+		column = 7;
+		direction = 1;
+	  }
+	  if(precolumn == 4)
+	  {
+		column = 0;
+		direction = 0;
+	  }
+	  if(precolumn == 5)
+	  {
+		column = 0;
+		direction = 1;
+	  }
+      var sort = [[ column, direction ]];
+    if (column >= 0) {
+      $('table').trigger("sorton", [sort]);
+    }
+  });
+});
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = document.cookie + cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user = getCookie("username");
+    if (user != "") {
+        //alert("Welcome again " + user);
+    } else {
+        //user = prompt("Please enter your name:", "");
+        //if (user != "" && user != null) {
+         //   setCookie("username", user, 365);
+        //}
+		//alert("Welcome again " + user);
+    }
+}
+
+$(function() {
+
+  $("table").tablesorter({ theme : 'blue', sortList: [[3,1],[0,0]] });
+
+  // Add two new rows using the "addRows" method
+  // the "update" method doesn't work here because not all
+  // rows are present in the table when the pager is applied
+  $('#button_add').click(function() {
+    // add two rows
+	var nazwa=document.getElementById("nazwa");
+	var kod=document.getElementById("kod");
+	var netto=document.getElementById("netto");
+	var vat=document.getElementById("vat");
+	var brutto=document.getElementById("brutto");
+	var kategoria=document.getElementById("kategoria");
+	var opcje1=$("input[id='gridRadios1']:checked").val();
+	var opcje2=$("input[id='gridRadios2']:checked").val();
+	var opcje3=$("input[id='gridRadios3']:checked").val();
+	var opcje4=$("input[id='gridRadios4']:checked").val();
+	var opcje5=$("input[id='gridRadios5']:checked").val();
+	var ocena=$("input[name='inlineRadioOptions']:checked").val();
+	var ajdi=document.getElementsByName("towar").length;
+	if(opcje1!='1')
+	{
+		opcje1='';
+	}
+	if(opcje2!='2')
+	{
+		opcje2='';
+	}
+	if(opcje3!='3')
+	{
+		opcje3='';
+	}
+	if(opcje4!='4')
+	{
+		opcje4='';
+	}
+	if(opcje5!='5')
+	{
+		opcje5='';
+	}
+	if(walidacja_nazwy()==true && walidacja_kodu()==true && walidacja_netto()==true && walidacja_vat()==true && walidacja_kategoria()==true)
+	{
+		count=count+1;
+		var row = '<tr id="'+count+'"><td id="nazwa'+count+'">'+nazwa.value+'</td><td>'+kod.value+'</td><td>'+netto.value+'</td><td>'+vat.value+'</td><td>'+brutto.value+'</td><td>'+kategoria.value+'</td><td>'+opcje1+opcje2+opcje3+opcje4+opcje5+'</td><td>'+ocena+'</td><td>image.jpg</td><td>       <input class="form-check-input" type="checkbox" name="towar" id="'+count+'" value="'+count+'"></td></tr>',
+      $row = $(row),
+      // resort table using the current sort; set to false to prevent resort, otherwise
+      // any other value in resort will automatically trigger the table resort.
+      resort = true;
+	  var ciacho=document.cookie;
+	  var tabelka = 'tabelka=';
+	  if(getCookie('tabelka')!='')
+	  {
+		tabelka = '';
+	  }
+	  
+	  //var rowwithvarname=tabelka+row;
+	  ciacho=ciacho+tabelka+row+';';
+	  //alert(ciacho);
+    document.cookie=ciacho;
+	
+	//alert(row);
+	//alert(document.cookie);
+	var user = "Janusz";
+	//setCookie("username", user, 365);
+	//var namecookie = getCookie();
+	//alert(namecookie);
+	checkCookie();
+	zmienna = document.cookie;
+	//alert(zmienna);
+	
+    $('table')
+      .find('tbody').append($row)
+      .trigger('addRows', [$row, resort]);
+	}
+    $(table).trigger("update");
+    return false;
+  });
+
+});
+</script>
+    <title>Hello, world!</title>
+  </head>
+  <body onload="odpalaj()">
+  
+  <div class="container-fluid"><!--calosc-->
+    <div class="row pl-2 pr-2 pt-2">
+  <div class="col-12 p-3 mb-2 bg-info text-white"><center>Naglowek</center></div>
+</div><!--koniec naglowka-->
+
+<div class="sticky-top"> <!--gorne menu-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://wi.zut.edu.pl">WIZUT</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Szukaj">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+    </form>
+  </div>
+</nav>
+</div> <!--koniec gornego menu-->
+
+<div class="row pl-2 pr-2"><!--jakis tam duzy class-->
+  <div class="jumbotron jumbotron-fluid col-2 bg-primary pt-3"> <!--menu lewo-->
+  <div class="container">
+
+<div class="btn-group-vertical btn-block" role="group" aria-label="Basic example" onload="odpalaj()">
+  <button type="button" class="btn btn-secondary" onload="odpalaj()">Menu 1</button>
+  <button type="button" class="btn btn-secondary">Menu 2</button>
+  <button type="button" class="btn btn-secondary">Menu 3</button>
+</div>
+     </div>
+</div>
+  <div class="jumbotron jumbotron-fluid col-8 pt-2"> <!--srodek-->
+  <div class="container">
+    <h1 class="display-4">Formularz</h1>
+    <p class="lead"> </p>
+	<form onsubmit="return walidacja_nazwy()">
+  <div class="form-group row">
+    <label for="nazwa" class="col-sm-2 col-form-label">Nazwa towaru</label>
+    <div class="col-sm-10">
+		<input type="text" class="form-control" id="nazwa" placeholder="Nazwa towaru" onBlur="walidacja_nazwy()">
+		<div class="invalid-feedback" id="blad_name"></div>
+	</div>
+  </div>
+  <div class="form-group row">
+    <label for="kod" class="col-sm-2 col-form-label">Kod towaru</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="kod" placeholder="Kod towaru" onBlur="walidacja_kodu()">
+	  <div class="invalid-feedback" id="blad_name2"></div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="netto" class="col-sm-2 col-form-label">Cena netto</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="netto" placeholder="Cena netto" onBlur="walidacja_netto()">
+	  <div class="invalid-feedback" id="blad_name3"></div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="vat" class="col-sm-2 col-form-label">Stawka VAT</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="vat" placeholder="Stawka VAT" onBlur="walidacja_vat()">
+	  <div class="invalid-feedback" id="blad_name4"></div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="brutto" class="col-sm-2 col-form-label">Cena brutto</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="brutto" placeholder="Cena brutto" onBlur="walidacja_brutto()">
+	  <div class="invalid-feedback" id="blad_name5"></div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="kategoria" class="col-sm-2 col-form-label">Kategoria towaru</label>
+	<div class="col-sm-10">
+    <select class="form-control" id="kategoria" onBlur="walidacja_kategoria()">
+	<option value="0">wybierz kategorie</option>
+      <option value="1">Kategoria 1</option>
+      <option value="2">Kategoria 2</option>
+      <option value="3">Kategoria 3</option>
+    </select>
+	<div class="invalid-feedback" id="blad_name6"></div>
+	</div>
+  </div>
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Opcje towaru</legend>
+      <div class="col-sm-10" onBlur="walidacja_opcje()">
+        <div class="form-check" id="opcje" onBlur="walidacja_opcje()">
+          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="1">
+          <label class="form-check-label" for="gridRadios1">
+            Opcja 1
+          </label>
+        </div>
+        <div class="form-check" onBlur="walidacja_opcje()">
+          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="2">
+          <label class="form-check-label" for="gridRadios2">
+            Opcja 2
+          </label>
+        </div>
+        <div class="form-check" onBlur="walidacja_opcje()">
+          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios3" value="3">
+          <label class="form-check-label" for="gridRadios3">
+            Opcja 3
+          </label>
+        </div>
+		<div class="form-check" onBlur="walidacja_opcje()">
+          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios4" value="4">
+          <label class="form-check-label" for="gridRadios4">
+            Opcja 4
+          </label>
+        </div>
+		<div class="form-check" onBlur="walidacja_opcje()">
+          <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios5" value="5">
+          <label class="form-check-label" for="gridRadios5">
+            Opcja 5
+          </label>
+        </div>
+		<div class="invalid-feedback" id="blad_name7"></div>
+      </div>
+    </div>
+  </fieldset>
+  <div class="form-group row">
+    <div class="col-sm-2">Ocena</div>
+    <div class="col-sm-10">
+      <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+  <label class="form-check-label" for="inlineRadio1">1</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+  <label class="form-check-label" for="inlineRadio2">2</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+  <label class="form-check-label" for="inlineRadio3">3</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4">
+  <label class="form-check-label" for="inlineRadio3">4</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5">
+  <label class="form-check-label" for="inlineRadio3">5</label>
+</div>
+    </div>
+	<div class="invalid-feedback" id="blad_name8"></div>
+	</div>
+		
+ 
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button class="btn btn-primary" id="button_add" onclick="walidacja_all()">Dodaj</button>
+    </div>
+  </div>
+</form>
+
+<select>
+    <option value="-">Wybierz sortowanie</option>
+    <option value="0">Cena od najnizszej</option>
+    <option value="1">Cena od najwyzszej</option>
+	<option value="2">Ocena od najnizszej</option>
+	<option value="3">Ocena od najwyzszej</option>
+	<option value="4">Nazwa od A</option>
+	<option value="5">Nazwa od Z</option>
+</select>
+
+<button class="btn btn-primary" id="button_remove" onclick="remove()">Usun to</button>
+<button class="btn btn-primary" id="button_edit" onclick="edit()">Edytuj to</button>
+
+
+
+<div id="ex1" class="modal">
+  <h1>Koszyk</h1>
+  <p id="koszz"></p>
+  <script>
+  //getCookie('koszyk');
+  
+  //document.write(getCookie('koszyk'));
+  document.getElementById("koszz").innerHTML = getCookie('koszyk');
+  
+  </script>
+  </br>
+  </br>
+  <b>Dostawa</b>
+  <select>
+    <option value="-">Wybierz sposob dostawy</option>
+    <option value="0">Poczta - 10zł</option>
+    <option value="1">Kurier - 15zł</option>
+	<option value="2">Odbior osobisty - 0zł</option>
+</select>
+  <p id="koszz"></p>
+  </br>
+  </br>
+  <button type="button" onclick="document.cookie='koszyk=;expires=Wed; 01 Jan 1970';document.getElementById('koszz').innerHTML = '';alert('KUPIONO!')">Kup</button>
+  <a href="#" rel="modal:close">Zamknij</a>
+</div>
+
+<!-- Link to open the modal -->
+<p><a href="#ex1" rel="modal:open">Pokaz koszyk</a></p>
+
+<button class="btn btn-primary" id="button_cookie" onclick="alert(document.cookie)">Ciacho</button>
+<button class="btn btn-primary" id="button_add" onclick="add()">Dodaj to</button>
+
+<table id="table" class="tablesorter"> 
+<thead> 
+<tr> 
+    <th>Nazwa</th> 
+    <th>Kod</th> 
+    <th>Netto</th> 
+    <th>VAT</th> 
+    <th>Brutto</th> 
+	<th>Kategoria</th> 
+	<th>Opcje</th> 
+	<th>Ocena</th> 
+	<th>Zdjecie</th>
+	<th>Usun to</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr id="1"> 
+    <td id="name1">Monitor</td> 
+    <td>11-11</td> 
+    <td>650.00</td> 
+    <td>8</td> 
+    <td>700.00</td> 
+	<td>1</td>
+	<td>35</td>
+	<td>5</td> 
+	<td id="photo1"><img src="komputer.jpg" alt="komputer"></td> 
+	<td>       <input class="form-check-input" type="checkbox" name="towar" id="1" value="1"></td>
+</tr> 
+<tr id="2"> 
+    <td id="name2">Laptop</td> 
+    <td>11-12</td> 
+    <td>600.00</td> 
+    <td>50</td> 
+    <td>700.00</td> 
+	<td>2</td>
+	<td>15</td>
+	<td>1</td> 
+	<td id="photo2"><img src="komputer.jpg" alt="komputer"></td> 
+	<td>       <input class="form-check-input" type="checkbox" name="towar" id="2" value="2"></td>
+</tr> 
+<tr id="3"> 
+    <td id="name3">Komputer</td> 
+    <td>11-22</td> 
+    <td>650.00</td> 
+    <td>80</td> 
+    <td>1000.00</td> 
+	<td>1</td>
+	<td>4</td>
+	<td>5</td> 
+	<td id="photo3"><img src="komputer.jpg" alt="komputer"></td> 
+	<td>       <input class="form-check-input" type="checkbox" name="towar" id="3" value="3"></td>
+</tr> 
+<tr id="4"> 
+    <td id="name4">Telewizor</td> 
+    <td>25-55</td> 
+    <td>700.00</td> 
+    <td>10</td> 
+    <td>800.00</td> 
+	<td>3</td>
+	<td>345</td>
+	<td>2</td> 
+	<td id="photo4"><img src="komputer.jpg" alt="komputer"></td> 
+	<td>       <input class="form-check-input" type="checkbox" name="towar" id="4" value="4"></td>
+</tr> 
+<script type="text/javascript">
+count=count+1;
+		var hehezmienna=document.cookie;
+		var hehezmienna2=getCookie('tabelka');
+		//alert(hehezmienna2);
+        document.write(hehezmienna2);
+      </script>
+</tbody> 
+</table>
+
+
+</div><!--koniec srodek container-->
+</div><!--koniec srodek-->
+
+  
+  <div class="jumbotron jumbotron-fluid col-2 bg-primary pt-2"><!--menu prawo-->
+  <div class="container">
+    <h1 class="display-4">Linki</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div><!--koniec menu prawo-->
+
+</div><!--koniec jakiegos tam duzego class-->
+</div><!--koniec calosc-->
+
+<h1>sticky</h1>
+<h1>sticky</h1>
+<h1>sticky</h1>
+<b>ID:</b> <span id="id"></span><br>
+<b>Photo:</b> <span id="photo"></span><br>
+<table id="demo"></table>
+<script>
+var xmlhttp, xmlDoc;
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "note.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML;
+document.getElementById("id").innerHTML=
+xmlDoc.getElementsByTagName("id")[0].childNodes[0].nodeValue;
+//document.getElementById("photo1").innerHTML=
+//xmlDoc.getElementsByTagName("photo1")[0].childNodes[0].nodeValue;
+//document.getElementById("photo2").innerHTML=
+//xmlDoc.getElementsByTagName("photo2")[0].childNodes[0].nodeValue;
+//document.getElementById("photo3").innerHTML=
+//xmlDoc.getElementsByTagName("photo3")[0].childNodes[0].nodeValue;
+//document.getElementById("photo4").innerHTML=
+//xmlDoc.getElementsByTagName("photo4")[0].childNodes[0].nodeValue;
+
+//var laptop = xmlDoc.getElementsByTagName("photo2")[0].childNodes[0].nodeValue;
+//var laptoppic = '<img src="'+laptop+'">'
+//alert(laptoppic);
+document.getElementById("photo1").innerHTML=
+'<img src="'+xmlDoc.getElementsByTagName("photo1")[0].childNodes[0].nodeValue+'">';
+document.getElementById("photo2").innerHTML=
+'<img src="'+xmlDoc.getElementsByTagName("photo2")[0].childNodes[0].nodeValue+'">';
+document.getElementById("photo3").innerHTML=
+'<img src="'+xmlDoc.getElementsByTagName("photo3")[0].childNodes[0].nodeValue+'">';
+document.getElementById("photo4").innerHTML=
+'<img src="'+xmlDoc.getElementsByTagName("photo4")[0].childNodes[0].nodeValue+'">';
+
+
+var i;
+  //var xmlDoc = xml.responseXML;
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
+  var x = xmlDoc.getElementsByTagName("item");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("photo")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+	document.getElementById("photo").innerHTML=
+	x[i].getElementsByTagName("photo")[i].childNodes[i].nodeValue;
+  }
+  document.getElementById("demo").innerHTML = table;
+</script>
+<h1>sticky</h1>
+<h1>sticky</h1>
+<img src="komputer.jpg" alt="komputer">
+<div id="ex1" class="modal">
+  <p>
+  <script>
+  getCookie('koszyk');
+  </script>
+  </p>
+  <a href="#" rel="modal:close">Close</a>
+</div>
+
+<!-- Link to open the modal -->
+<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+<h1>sticky</h1>
+<h1>sticky</h1>
+
+<footer class="footer fixed-bottom pl-2 pr-2">
+  <footer class="col-12 p-3 mb-2 bg-secondary text-white"><center>stopka</center></footer>
+</footer>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  </body>
+</html>
+
+
+
