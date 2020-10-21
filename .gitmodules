@@ -4,3 +4,6 @@
 [submodule "S4/IO/Zabka"]
 	path = S4/IO/Zabka
 	url = https://github.com/szymmirr/Zabka
+[submodule "S5/PZ/ProjektZespolowy"]
+	path = S5/PZ/ProjektZespolowy
+	url = https://github.com/TomaszWychocki/ProjektZespolowy
