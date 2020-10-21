@@ -8,6 +8,7 @@ S4/GK/GKiW_Lab6/3rd_party/* linguist-vendored
 S5/PUA/Schody/Logical/Libraries/* linguist-vendored
 S5/PUA/Palnik/Logical/Libraries/* linguist-vendored
 S5/PUA/Tunel/Logical/Libraries/* linguist-vendored
+S6/AIWTD/Sklep/Sklep/Scripts/* linguist-vendored
 
 stdafx.cpp linguist-generated
 *.h linguist-generated
@@ -27,6 +28,7 @@ S4/SW/twojstary/twojstary.asm linguist-generated
 S4/WDSI/Laboratory1/Laboratory1/Properties/* linguist-generated
 S4/WDSI/Laboratory1puzzle/Laboratory1/Properties/* linguist-generated
 S4/WDSI/Laboratory2/Laboratory2/Properties/* linguist-generated
+S6/AIWTD/Sklep/Sklep/Account/* linguist-generated
 
 S3/SKiT/* linguist-documentation
 
