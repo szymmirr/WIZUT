@@ -9,6 +9,8 @@ S5/PUA/Schody/Logical/Libraries/* linguist-vendored
 S5/PUA/Palnik/Logical/Libraries/* linguist-vendored
 S5/PUA/Tunel/Logical/Libraries/* linguist-vendored
 S6/AIWTD/Sklep/Sklep/Scripts/* linguist-vendored
+S6/PDD/__jquery.tablesorter/* linguist-vendored
+S6/PDD/bootstrap/* linguist-vendored
 
 stdafx.cpp linguist-generated
 *.h linguist-generated
