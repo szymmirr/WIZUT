@@ -1,0 +1,35 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Program: schody
+ * File: schody.ab
+ * Author: User
+ * Created: November 16, 2017
+ ********************************************************************
+ * Implementation of program schody
+ ********************************************************************)
+
+PROGRAM _INIT
+
+
+(* TODO : Add your code here *)
+
+
+END_PROGRAM
+
+
+PROGRAM _CYCLIC
+
+
+doZarowka[0] = (diPrzelacznik[0] XOR diPrzelacznik[1]) AND diCzujnikSwiatla
+
+
+END_PROGRAM
+
+PROGRAM _EXIT
+
+
+(* TODO : Add your code here *)
+
+
+END_PROGRAM

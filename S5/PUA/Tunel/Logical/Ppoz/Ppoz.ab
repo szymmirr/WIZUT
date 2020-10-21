@@ -1,0 +1,52 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Program: Ppoz
+ * File: Ppoz.ab
+ * Author: User
+ * Created: November 16, 2017
+ ********************************************************************
+ * Implementation of program Ppoz
+ ********************************************************************)
+
+PROGRAM _INIT
+	flagaView = 0
+	
+	uiModeWork = 2
+
+END_PROGRAM
+
+
+PROGRAM _CYCLIC
+	CASE uiModeWork OF
+		ACTION 1:
+			Room[0].doTryskacz = Room[0].uiTryskacz
+			System.doKogut = System.uiKogut
+			System.doSyrena = System.uiSyrena
+			ENDACTION
+		ACTION 2:
+			System.doSystemAktywny = (((System.diStart OR System.uiStart) OR System.doSystemAktywny) AND (NOT(System.diStop) OR NOT (System.uiStop)))
+			IF System.doSystemAktywny THEN
+				Room[0].doTryskacz = (Room[0].diCzujnikDym AND Room[0].diCzujnikSwiatlo AND NOT (Room[0].diCzujnikTemp)) OR  \
+				(Room[0].diCzujnikDym AND NOT (Room[0].diCzujnikSwiatlo) AND Room[0].diCzujnikTemp) OR \
+				(NOT (Room[0].diCzujnikDym) AND Room[0].diCzujnikSwiatlo AND Room[0].diCzujnikTemp) OR \
+				(Room[0].diCzujnikDym AND Room[0].diCzujnikSwiatlo AND Room[0].diCzujnikTemp)
+					System.doSyrena = Room[0].doTryskacz AND NOT(System.diReset)
+					System.doKogut = Room[0].doTryskacz
+				ELSE 
+					Room[0].doTryskacz = FALSE
+					System.doSyrena = FALSE
+					System.doKogut = FALSE
+				
+				ENDIF
+		ENDACTION
+ENDCASE
+END_PROGRAM
+
+PROGRAM _EXIT
+
+
+(* TODO : Add your code here *)
+
+
+END_PROGRAM

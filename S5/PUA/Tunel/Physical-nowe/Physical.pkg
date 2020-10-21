@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.38 SP20?>
+<Physical xmlns="http://br-automation.co.at/AS/Physical">
+  <Configurations>
+    <Configuration Name="Simulation" Description="An ARsim is used as CPU." />
+    <Configuration Name="4PP481" Description="" />
+  </Configurations>
+</Physical>

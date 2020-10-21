@@ -1,0 +1,36 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Program: Zarowa
+ * File: Zarowa.ab
+ * Author: User
+ * Created: November 09, 2017
+ ********************************************************************
+ * Implementation of program Zarowa
+ ********************************************************************)
+
+PROGRAM _INIT
+
+
+(* TODO : Add your code here *)
+
+
+END_PROGRAM
+
+
+PROGRAM _CYCLIC
+
+
+	doZarowka[0] = diPrzelacznik[0]
+	
+
+
+END_PROGRAM
+
+PROGRAM _EXIT
+
+
+(* TODO : Add your code here *)
+
+
+END_PROGRAM

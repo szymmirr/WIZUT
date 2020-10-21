@@ -1,0 +1,35 @@
+(********************************************************************
+ * COPYRIGHT -- Microsoft
+ ********************************************************************
+ * Program: Tunel
+ * File: Tunel.ab
+ * Author: Liss_1
+ * Created: January 25, 2018
+ ********************************************************************
+ * Implementation of program Tunel
+ ********************************************************************)
+
+PROGRAM _INIT
+
+
+(* TODO : Add your code here *)
+
+
+END_PROGRAM
+
+
+PROGRAM _CYCLIC
+
+
+(* TODO : Add your code here *)
+
+
+END_PROGRAM
+
+PROGRAM _EXIT
+
+
+(* TODO : Add your code here *)
+
+
+END_PROGRAM

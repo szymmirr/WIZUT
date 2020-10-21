@@ -1,0 +1,21 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * File: IoMap.iom
+ * Author: User
+ * Created: November 09, 2017
+ ********************************************************************
+ * IO mapping file
+ ********************************************************************)
+VAR_CONFIG
+	Ppoz.System.doSystemAktywny AT %QX.SL1.SS1.IF1.ST3.DigitalOutput09;
+	Ppoz.System.diStart AT %IX.SL1.SS1.IF1.ST2.DigitalInput01;
+	Ppoz.System.diStop AT %IX.SL1.SS1.IF1.ST2.DigitalInput02;
+	Ppoz.System.diReset AT %IX.SL1.SS1.IF1.ST2.DigitalInput03;
+	Ppoz.Room[0].diCzujnikSwiatlo AT %IX.SL1.SS1.IF1.ST2.DigitalInput04;
+	Ppoz.Room[0].diCzujnikTemp AT %IX.SL1.SS1.IF1.ST2.DigitalInput05;
+	Ppoz.Room[0].diCzujnikDym AT %IX.SL1.SS1.IF1.ST2.DigitalInput06;
+	Ppoz.Room[0].doTryskacz AT %QX.SL1.SS1.IF1.ST3.DigitalOutput01;
+	Ppoz.System.doKogut AT %QX.SL1.SS1.IF1.ST3.DigitalOutput02;
+	Ppoz.System.doSyrena AT %QX.SL1.SS1.IF1.ST3.DigitalOutput03;
+END_VAR

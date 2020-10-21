@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<breakpoints>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/Palnik/Palnik.ab</file>
+    <position>28</position>
+    <condition></condition>
+    <module>Palnik</module>
+  </breakpoint>
+</breakpoints>

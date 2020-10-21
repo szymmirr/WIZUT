@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.38 SP20?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Global data types">Global.typ</Object>
+    <Object Type="File" Description="Global variables">Global.var</Object>
+    <Object Type="Package" Description="Global libraries">Libraries</Object>
+    <Object Type="DataObject" Language="Vc" Description="320x240 (QVGA)">Visu</Object>
+    <Object Type="Program" Language="IEC" Description="A new program">Tunel</Object>
+  </Objects>
+</Package>

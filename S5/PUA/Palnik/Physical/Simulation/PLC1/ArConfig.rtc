@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.80.17?>
+<RuntimeConfiguration Version="3.0.22">
+  <Module ID="$root" Hardware="1A4000.00">
+    <Group ID="Ethernet">
+      <Parameter ID="EthernetHostName" Value="br-automation" />
+      <Parameter ID="EthernetDefaultGateway" />
+      <Group ID="Routes" />
+    </Group>
+    <Group ID="DNS">
+      <Selector ID="ActivateDns" Value="0" />
+    </Group>
+    <Group ID="AdditionalHardware" />
+    <Group ID="WebServer">
+      <Selector ID="ActivateWebServer" Value="1">
+        <Parameter ID="TransferWebServ" Value="1" />
+      </Selector>
+    </Group>
+    <Group ID="SystemDiagnostics">
+      <Selector ID="ActivateSdm" Value="1">
+        <Parameter ID="TransferArSdm" Value="1" />
+        <Parameter ID="TransferArSdmSvg" Value="1" />
+        <Parameter ID="TransferArSdmSvp" Value="1" />
+        <Parameter ID="TransferArSdmHtm" Value="1" />
+      </Selector>
+    </Group>
+  </Module>
+  <Module ID="IF1" Hardware="1A4000.00 (Ser)">
+    <Group ID="Device">
+      <Parameter ID="Baudrate" Value="57600" />
+      <Parameter ID="ReceiveIdleTime" Value="5" />
+      <Parameter ID="Parity" Value="E" />
+      <Parameter ID="DataBits" Value="8" />
+      <Parameter ID="StopBits" Value="1" />
+      <Parameter ID="ActivateDevice" Value="0" />
+    </Group>
+    <Group ID="INAModem">
+      <Selector ID="ActivateModem" Value="0" />
+    </Group>
+    <Group ID="Network">
+      <Selector ID="NetworkProtocol" Value="Disable">
+        <Group ID="INA">
+          <Parameter ID="ActivateIna" Value="0" />
+        </Group>
+      </Selector>
+    </Group>
+  </Module>
+  <Module ID="IF2" Hardware="1A4000.00 (Ser)">
+    <Group ID="Device">
+      <Parameter ID="Baudrate" Value="57600" />
+      <Parameter ID="ReceiveIdleTime" Value="5" />
+      <Parameter ID="Parity" Value="E" />
+      <Parameter ID="DataBits" Value="8" />
+      <Parameter ID="StopBits" Value="1" />
+      <Parameter ID="ActivateDevice" Value="0" />
+    </Group>
+    <Group ID="INAModem">
+      <Selector ID="ActivateModem" Value="0" />
+    </Group>
+    <Group ID="Network">
+      <Selector ID="NetworkProtocol" Value="Disable">
+        <Group ID="INA">
+          <Parameter ID="ActivateIna" Value="0" />
+        </Group>
+      </Selector>
+    </Group>
+  </Module>
+  <Module ID="IF3" Hardware="1A4000.00 (Eth)">
+    <Group ID="Device">
+      <Parameter ID="InternetAddress" Value="127.0.0.1" />
+    </Group>
+    <Group ID="INA">
+      <Parameter ID="ActivateIna" Value="1" />
+      <Parameter ID="InaPort" Value="11160" />
+      <Parameter ID="InaNodeNumber" Value="2" />
+    </Group>
+    <Group ID="Modbus">
+      <Selector ID="ActivateModbus" Value="0" />
+    </Group>
+  </Module>
+</RuntimeConfiguration>

@@ -1,0 +1,15 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Program: schody
+ * File: schody.var
+ * Author: User
+ * Created: November 16, 2017
+ ********************************************************************
+ * Local variables of program schody
+ ********************************************************************)
+VAR
+	doZarowka : ARRAY[0..9] OF BOOL;
+	diPrzelacznik : ARRAY[0..9] OF BOOL;
+	diCzujnikSwiatla : BOOL := FALSE;
+END_VAR

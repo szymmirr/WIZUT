@@ -1,0 +1,29 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Program: Tunel
+ * File: TunelCyclic.ab
+ * Author: Liss_1
+ * Created: January 25, 2018
+ ********************************************************************
+ * Implementation of program Tunel
+ ********************************************************************)
+
+PROGRAM _CYCLIC
+	
+	Tunel.doSystemAktywny = ( (Tunel.diStart OR Tunel.doSystemAktywny) AND NOT (Tunel.diStop) )
+	Tunel.doSystemAktywny = Tunel.doSystemAktywny AND Tunel.diEStop
+	IF (Tunel.doSystemAktywny = FALSE) THEN
+		
+		Tunel.doWentylatorM1 = FALSE
+		Tunel.doWentylatorM2 = FALSE
+		Tunel.doWentylatorM3 = FALSE
+	ELSE
+		Tunel.doWentylatorM1 = Tunel.diCzujnikSpalin1 AND Tunel.diCzujnikSpalin2
+		Tunel.doWentylatorM2 = Tunel.diCzujnikSpalin2 AND Tunel.diCzujnikSpalin3
+		Tunel.doWentylatorM3 = Tunel.diCzujnikSpalin3 AND Tunel.diCzujnikSpalin4
+		
+	ENDIF
+	
+
+END_PROGRAM

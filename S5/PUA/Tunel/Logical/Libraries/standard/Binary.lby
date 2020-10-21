@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.32 SP14?>
+<Library Description="This library contains standard function blocks and funtions for IEC 1131-3." xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>standard.fun</File>
+  </Files>
+</Library>

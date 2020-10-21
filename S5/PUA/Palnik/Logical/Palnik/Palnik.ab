@@ -1,0 +1,149 @@
+(********************************************************************
+ * COPYRIGHT -- Microsoft
+ ********************************************************************
+ * Program: Palnik
+ * File: Palnik.ab
+ * Author: Liss_1
+ * Created: January 04, 2018
+ ********************************************************************
+ * Implementation of program Palnik
+ ********************************************************************)
+
+PROGRAM _INIT
+
+
+
+
+END_PROGRAM
+
+
+PROGRAM _CYCLIC
+	
+	//czujnik air flow - nie ma go na tym schemacie, ale jest gdzieœ tam w zgiêciu gdzie p³ynie air
+	// normalnie jest otwarty
+
+	//state init jest bezwarunkowy
+	System.doSystemAktywny = ((System.diStart OR System.doSystemAktywny) AND NOT(System.diStop)) //dodac obsluge diEStop chyba
+	SELECT
+		STATE INIT // Oczekiwanie na akcje uzytkownika
+			// operacje do wykonania
+			//		
+			WHEN System.doSystemAktywny = TRUE
+				NEXT AIRFAN
+    
+		STATE AIRFAN
+			Palnik[0].doAirFan = TRUE
+			
+			Wait[1].IN = Palnik[0].diAirFlow
+			Wait[1].ET = T#0s
+			Wait[1].PT = T#3s
+			Wait[1] FUB TON()
+			WHEN (Palnik[0].diFanStarter = TRUE) AND (Wait[1].Q = TRUE)
+				NEXT AIRING
+	
+		STATE AIRING
+			Wait[0].IN = FALSE
+			Wait[0].IN = TRUE
+			Wait[0].ET = T#0s
+			Wait[0].PT = T#10s
+			Wait[0] FUB TON()
+			WHEN Wait[0].Q = TRUE
+				NEXT INITBURN 
+		
+		STATE INITBURN
+
+			
+			i = i + 1
+			WHEN i=5
+				NEXT STOP
+				
+				
+			WHEN TRUE 
+				NEXT IGNITION
+
+			
+			
+		STATE IGNITION
+			Wait[2].IN = FALSE
+			Wait[2].IN = TRUE
+			Wait[2].ET = T#0s
+			Wait[2].PT = T#2s
+				
+			Palnik[0].doPilotValve = TRUE
+			Palnik[0].doIgniter = TRUE
+			Wait[2] FUB TON()
+			WHEN (Wait[2].Q = TRUE) 
+				NEXT IGNITION2
+			
+		STATE IGNITION2
+			Palnik[0].doIgniter = FALSE
+			IF (Palnik[0].diFlameDetector = TRUE) THEN
+				Palnik[0].doIgniter = FALSE
+				Palnik[0].doMainValve = TRUE
+				Palnik[0].doPilotValve = FALSE
+				flag = TRUE
+			ELSE
+				Palnik[0].doIgniter = FALSE
+				Palnik[0].doMainValve = FALSE
+				Palnik[0].doPilotValve = FALSE
+			ENDIF
+			
+			WHEN flag = TRUE
+				NEXT BURN
+			WHEN flag = FALSE
+				NEXT BREAK
+			
+			
+		STATE BREAK
+			Wait[3].IN = FALSE
+			Wait[3].IN = TRUE
+			Wait[3].ET = T#0s
+			Wait[3].PT = T#3s
+			Wait[3] FUB TON()
+			WHEN Wait[3].Q = TRUE
+				NEXT INITBURN
+			
+		STATE BURN
+			f1 = System.diStop
+			f2 = System.diEStop
+			f3 = Palnik[0].diAirFlow
+			f4 = Palnik[0].diFlameDetector
+			WHEN ((f1 = TRUE) OR (f2 = TRUE) OR (f3 = FALSE) OR (f4 = FALSE))
+				NEXT STOP 
+			
+			
+		STATE STOP // wylaczenie wszystkiego
+			Palnik[0].doMainValve = FALSE
+			Palnik[0].doPilotValve = FALSE
+			System.diStop = FALSE
+			System.diEStop = FALSE
+			System.diStart = FALSE
+			i = 0
+			Wait[0].IN = FALSE
+			Wait[1].IN = FALSE
+			Wait[2].IN = FALSE
+			Wait[3].IN = FALSE
+			Wait[4].IN = FALSE
+			
+			Wait[4].IN = TRUE
+			Wait[4].ET = T#0s
+			Wait[4].PT = T#10s
+			Wait[4] FUB TON()
+			
+			WHEN (Wait[4].Q = TRUE) 
+				 NEXT STOPFINAL
+			
+		
+			
+		STATE STOPFINAL
+			Palnik[0].doAirFan = FALSE
+			IF ((Palnik[0].diFlameDetector = FALSE) AND (Palnik[0].doAirFan = FALSE)) THEN
+				System.doSystemAktywny = FALSE
+			ENDIF
+			WHEN (System.doSystemAktywny = FALSE)
+				NEXT INIT 
+				
+	ENDSELECT
+
+
+END_PROGRAM

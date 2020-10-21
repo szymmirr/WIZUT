@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.38 SP20?>
+<VcMapping>
+  <Row Address="DS1" KeyPriority="Lower Cyclic #8" KeyMapping="4PP481.1505-75d.dis" Description="PP481" />
+</VcMapping>

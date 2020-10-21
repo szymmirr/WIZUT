@@ -1,0 +1,21 @@
+(********************************************************************
+ * COPYRIGHT -- Microsoft
+ ********************************************************************
+ * Program: Palnik
+ * File: Palnik.var
+ * Author: Liss_1
+ * Created: January 04, 2018
+ ********************************************************************
+ * Local variables of program Palnik
+ ********************************************************************)
+VAR
+	Wait : ARRAY[0..10] OF TON := [11(0)];
+	Palnik : ARRAY[0..10] OF BurnerStruct := [11(0)];
+	System : SystemStruct := (0);
+	i : INT := 0;
+	flag : BOOL := FALSE;
+	f4 : BOOL := FALSE;
+	f3 : BOOL := FALSE;
+	f2 : BOOL := FALSE;
+	f1 : BOOL := FALSE;
+END_VAR
