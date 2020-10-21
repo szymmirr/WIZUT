@@ -5,6 +5,9 @@ S4/GK/GKiW_Lab3/freeglut/* linguist-vendored
 S4/GK/GKiW_Lab4/freeglut/* linguist-vendored
 S4/GK/GKiW_Lab5/3rd_party/* linguist-vendored
 S4/GK/GKiW_Lab6/3rd_party/* linguist-vendored
+S5/PUA/Schody/Logical/Libraries/* linguist-vendored
+S5/PUA/Palnik/Logical/Libraries/* linguist-vendored
+S5/PUA/Tunel/Logical/Libraries/* linguist-vendored
 
 stdafx.cpp linguist-generated
 *.h linguist-generated
