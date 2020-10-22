@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+layout:decorator="layout">
+    <head>
+        <title>MiniMatlab 0.1 beta</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section layout:fragment="content">
+        
+        <div>
+            <h2>Mnożenie</h2>
+            <form action="/multiply" method="post">
+                x = <input type="text" name="x" value="2" />
+                y = <input type="text" name="y" value="2" />
+                <input type="submit" value="Pomnóż" />
+            </form>
+        </div>
+        
+        </section>
+    </body>
+</html>

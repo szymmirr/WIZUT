@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+  <head>
+      <title layout:title-pattern="Furka4U - $CONTENT_TITLE">Furka4U</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+  </head>
+  <body>
+      <div class="container">
+          <div class="page-header">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/BlondeWomanDrivingCar.svg" style="float: right" height="86pt"/>
+
+              <h1>Furka4U <small>Najlepsze furki w necie</small></h1>
+              <h4>
+              <a href="/">Przeglądaj ogłoszenia</a> | <a href="/newoffer">Dodaj ogłoszenie</a>
+              </h4>
+          </div>
+
+          <div layout:fragment="content">
+              Tu będzie wstawiona właściwa zawartość widoku.
+          </div>
+      </div>
+  </body>
+</html>

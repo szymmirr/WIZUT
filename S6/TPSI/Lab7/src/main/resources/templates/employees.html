@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Spring i Thymeleaf: lista pracowników</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+        
+        <style>
+            img.empPhoto {
+                width: 300px;
+            }
+            .fired {
+                color: firebrick;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid" th:inline="text">
+            <h1>Pan Prezes</h1>
+            <p>
+                <b>
+                    <span th:text='|${boss.firstName} ${boss.lastName}|'>Imię i nazwisko</span>
+                    
+                </b>
+            </p>
+            <img th:src="${boss.photoUrl}" class="empPhoto" 
+                 src="http://via.placeholder.com/250x250"/>
+
+            <h1>Pracownicy firmy</h1>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Lp</th>
+                    <th>Imię i nazwisko</th>
+                    <th>Stanowisko</th>
+                    <th>Pensja</th>
+                    <th>Data zatrudnienia</th>
+                    <th>Data zwolnienia</th>
+                    <th>Umiejętności</th>
+                    <th>Uwagi</th>
+                    <th>Zdjęcie</th>
+                </tr>
+                <tr th:each="employees,iterStat : ${employees}" th:class="${iterStat.odd}? 'odd'">
+                    <td th:text="${iterStat.count}"></td>
+                    <td th:text="|${employees.firstName} ${employees.lastName}|"></td>
+                    <td></td>
+                    <td th:text="${#numbers.formatDecimal(employees.salary,3,'WHITESPACE',2,'COMMA')}"></td>
+                    <td th:text="${#calendars.format(employees.dateOfEmployment,'dd.MM.yyyy')}"></td>
+                    <td th:text="${#calendars.format(employees.dateOfTermination,'dd.MM.yyyy')}"
+                        th:unless="${employees.dateOfTermination} == null">Wciaz pracuje</td>
+                    
+                    
+                    <td th:text="${employees.skills}"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

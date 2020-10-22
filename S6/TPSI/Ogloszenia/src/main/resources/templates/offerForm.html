@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="layout">
+    <head>
+        <title th:text="${header}"></title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <section layout:fragment="content">
+            <h1 th:text="${header}"></h1>
+            <form th:action="${action}" method="POST" th:object="${offer}" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Tytuł:</label>
+        <div class="col-sm-10" th:classappend="${#fields.hasErrors('*{title}')?'has-error':''}">
+            <input type="text" th:field="*{title}" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Rocznik:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{year}')?'has-error':''}">
+            <input type="number" th:field="*{year}" class="form-control"/>
+        </div>
+        <label class="col-sm-2 control-label">Przebieg:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{mileage}')?'has-error':''}">
+            <input type="number" th:field="*{mileage}" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Pojemność silnika:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{engineSize}')?'has-error':''}">
+            <input type="number" step="0.1" th:field="*{engineSize}" class="form-control"/>
+        </div>
+        <label class="col-sm-2 control-label">Moc silnika:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{enginePower}')?'has-error':''}">
+            <input type="number" th:field="*{enginePower}" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Liczba drzwi:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{doors}')?'has-error':''}">
+            <input type="number" th:field="*{doors}" class="form-control"/>
+        </div>
+        <label class="col-sm-2 control-label">Kolor:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{colour}')?'has-error':''}">
+            <input type="text" th:field="*{colour}" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Model:</label>
+        <div class="col-sm-10" th:classappend="${#fields.hasErrors('*{model.id}')?'has-error':''}">
+            <select th:field="*{model.id}" class="form-control">
+                <option th:each="m : ${carModels}" th:value="${m.id}" th:text="${m.manufacturer.name + ' ' + m.name}"></option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Nadwozie:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{bodyStyle.id}')?'has-error':''}">
+            <select th:field="*{bodyStyle.id}" class="form-control">
+                <option th:each="bs : ${bodyStyles}" th:value="${bs.id}" th:text="${bs.name}"></option>
+            </select>
+        </div>
+        <label class="col-sm-2 control-label">Rodzaj paliwa:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{fuelType.id}')?'has-error':''}">
+            <select th:field="*{fuelType.id}" class="form-control">
+                <option th:each="ft : ${fuelTypes}" th:value="${ft.id}" th:text="${ft.name}"></option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Cena:</label>
+        <div class="col-sm-4" th:classappend="${#fields.hasErrors('*{price}')?'has-error':''}">
+            <input type="number" th:field="*{price}" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Opis:</label>
+        <div class="col-sm-10" th:classappend="${#fields.hasErrors('*{description}')?'has-error':''}">
+            <textarea class="form-control" th:field="*{description}" rows="5"/>
+        </div>
+    </div>
+    <input type="hidden" th:field="*{id}" />
+    <div class="form-group">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <input type="submit" value="Zapisz" class="form-control btn btn-primary"/>
+        </div>
+        <div class="col-sm-4">
+            <a href="/" class="btn btn-default">Anuluj</a>
+        </div>
+    </div>
+</form>
+        </section>
+    </body>
+</html>

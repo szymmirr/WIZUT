@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+layout:decorator="layout">
+    <head>
+        <title layout:title-pattern="MiniMatlab 0.1 alpha - $CONTENT_TITLE">MiniMatlab 0.1 alpha</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section layout:fragment="content">
+        <div class="header">
+        </div>
+
+        <div class="navMenu">
+            <a href="/add">Dodawanie</a> |
+            <a href="/multiply">Mnożenie</a> |
+            <a href="/calculate">Uniwersalny kalkulator</a>
+        </div>
+
+        <div layout:fragment="content">
+            Tu będzie wstawiona właściwa zawartość widoku.
+        </div>
+            </section>
+    </body>
+</html>

@@ -11,6 +11,9 @@ S5/PUA/Tunel/Logical/Libraries/* linguist-vendored
 S6/AIWTD/Sklep/Sklep/Scripts/* linguist-vendored
 S6/PDD/__jquery.tablesorter/* linguist-vendored
 S6/PDD/bootstrap/* linguist-vendored
+S6/AIWTD/Sklep/Sklep/Account/* linguist-vendored
+S6/AIWTD/Sklep/Sklep/App_Start/* linguist-vendored
+S6/AIWTD/Sklep/Sklep/Logic/* linguist-vendored
 
 stdafx.cpp linguist-generated
 *.h linguist-generated
@@ -30,7 +33,6 @@ S4/SW/twojstary/twojstary.asm linguist-generated
 S4/WDSI/Laboratory1/Laboratory1/Properties/* linguist-generated
 S4/WDSI/Laboratory1puzzle/Laboratory1/Properties/* linguist-generated
 S4/WDSI/Laboratory2/Laboratory2/Properties/* linguist-generated
-S6/AIWTD/Sklep/Sklep/Account/* linguist-generated
 
 S3/SKiT/* linguist-documentation
 

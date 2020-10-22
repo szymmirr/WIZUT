@@ -1,0 +1,12 @@
+101;Łopata duża;narzędzia;127.50
+102;Grabie;narzędzia;34.50
+103;Baton Snickers;słodycze;2.50
+104;Baton Mars;słodycze;2.35
+105;Młotek ślusarski;narzędzia;12.00
+106;Wiertarka udarowa;narzędzia;325.00
+107;Call of Duty;oprogramowanie;190.00
+108;Czekolada nadziewana;słodycze;3.49
+109;Intellij IDEA;oprogramowanie;650.00
+110;Microsoft Windows;oprogramowanie;649.00
+111;Klucz francuski;narzędzia;73.50
+112;Zaliczenie egzaminu;inne;250.00

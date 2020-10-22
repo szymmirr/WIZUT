@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MiniMatlab 0.1 alpha</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <h1>Wynik obliczeń</h1>
+        <p th:object="${calculatorForm}">
+            <span th:text="*{x}">2</span>
+            <span th:text="*{operation}">+</span>
+            <span th:text="*{y}">2</span>
+            =
+            <span th:text="${result}">4</span>
+        </p>
+        <p>
+            <a href="/">Fajnie było, jeszcze raz!</a>
+        </p>
+    </body>
+</html>
