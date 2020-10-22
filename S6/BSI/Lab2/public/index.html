@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BSI</title>
+</head>
+
+<body>
+<input type="text" name="textbox" id="textbox">
+
+<input type="button" value="GET" onclick="getValue()">
+<input type="button" value="POST" onclick="setValue()">
+
+<input type="button" value="REST GET" onclick="restGET()">
+<input type="button" value="REST POST" onclick="restPOST()">
+
+<input type="button" value="jwt GET" onclick="jwtGET()">
+<input type="button" value="jwt POST" onclick="jwtPOST()">
+
+<script>
+const restServer = "https://smirr.net:3000"
+const server = "https://smirr.org"
+
+function getValue()
+{
+    sendGET(restServer).then(json => 
+        document.getElementById('textbox').value = json.value
+    );
+}
+
+function setValue()
+{
+    sendPOST(restServer, JSON.stringify(
+    {
+        "value" : document.getElementById('textbox').value
+    }));
+}
+
+function restGET()
+{
+    sendGET(server + "/rest").then(json => 
+        document.getElementById('textbox').value = json.value
+    );
+}
+
+function restPOST()
+{
+    sendPOST(server + "/rest", JSON.stringify(
+    {
+        "value" : document.getElementById('textbox').value
+    }));
+}
+
+function jwtGET()
+{
+    sendGET(server + "/restjwt").then(json => 
+        document.getElementById('textbox').value = json.value
+    );
+}
+
+function jwtPOST()
+{
+    sendPOST(server + "/restjwt", JSON.stringify(
+    {
+        "value" : document.getElementById('textbox').value
+    }));
+}
+
+async function sendGET(url) 
+{
+    let promise = await fetch(url,
+                {
+                    method: 'GET'
+                })
+                .then(res => res.json())
+                .catch(error => console.error('Error:', error));
+
+    return promise;
+}
+
+function sendPOST(url, body)
+{
+    fetch(url, 
+    {
+        method: 'POST',
+        body: body,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(res => res.json())
+    .then(response => console.log('Success:', JSON.stringify(response)))
+    .catch(error => console.error('Error:', error));
+}
+
+</script>
+</body>
+
+</html>

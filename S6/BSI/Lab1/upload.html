@@ -1,0 +1,18 @@
+<script>
+
+function uploadFile(content, filename) {
+ 
+  var form = new FormData();
+  form.append('file', filename);
+  form.append('data', content);
+ 
+  $http({
+    method: 'POST',
+    url: '//localhost:9000/',
+    data: form,
+    headers: { 'Content-Type': undefined }
+  }).then(function success(response) {}, function failure(error) {});
+ 
+}
+
+</script>
