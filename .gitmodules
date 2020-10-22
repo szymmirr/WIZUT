@@ -7,3 +7,9 @@
 [submodule "S5/PZ/ProjektZespolowy"]
 	path = S5/PZ/ProjektZespolowy
 	url = https://github.com/TomaszWychocki/ProjektZespolowy
+[submodule "S6/PADTM/android-lab4"]
+	path = S6/PADTM/android-lab4
+	url = https://github.com/szymmirr/android-lab4
+[submodule "S6/PADTM/Calendar-32b"]
+	path = S6/PADTM/Calendar-32b
+	url = https://github.com/szymmirr/Calendar-32b

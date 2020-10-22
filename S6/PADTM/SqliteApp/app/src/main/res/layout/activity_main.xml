@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.student.sqliteapp.MainActivity">
+
+    <EditText
+        android:id="@+id/editText_nazwa"
+        android:layout_width="213dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Nazwa"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_typZadania"
+        android:layout_width="214dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Typ zadania"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText_nazwa"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nazwa" />
+
+    <EditText
+        android:id="@+id/editText_priorytet"
+        android:layout_width="215dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Priorytet"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText_typZadania"
+        app:layout_constraintTop_toBottomOf="@+id/editText_typZadania" />
+
+    <EditText
+        android:id="@+id/editText_powiadomienie"
+        android:layout_width="215dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Powiadomienie"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText_priorytet"
+        app:layout_constraintTop_toBottomOf="@+id/editText_priorytet" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Dodaj"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_viewAll"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Wyswietl"
+        app:layout_constraintEnd_toEndOf="@+id/editText_notatka"
+        app:layout_constraintTop_toBottomOf="@+id/editText_notatka" />
+
+    <EditText
+        android:id="@+id/editText_poczatek_wydarzenia"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="49dp"
+        android:layout_marginTop="49dp"
+        android:ems="10"
+        android:hint="Poczatek wydarzenia"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_koniec_wydarzenia"
+        app:layout_constraintEnd_toEndOf="@+id/editText_typZadania"
+        app:layout_constraintStart_toStartOf="@+id/editText_koniec_wydarzenia"
+        app:layout_constraintTop_toTopOf="@+id/editText_powiadomienie" />
+
+    <EditText
+        android:id="@+id/editText_koniec_wydarzenia"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="98dp"
+        android:layout_marginTop="97dp"
+        android:ems="10"
+        android:hint="Koniec wydarzenia"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_notatka"
+        app:layout_constraintEnd_toEndOf="@+id/editText_adres"
+        app:layout_constraintStart_toStartOf="@+id/editText_adres"
+        app:layout_constraintTop_toTopOf="@+id/editText_powiadomienie" />
+
+    <EditText
+        android:id="@+id/editText_adres"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="Adres"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_notatka"
+        app:layout_constraintEnd_toEndOf="@+id/editText_notatka"
+        app:layout_constraintStart_toStartOf="@+id/editText_notatka"
+        app:layout_constraintTop_toTopOf="@+id/editText_koniec_wydarzenia" />
+
+    <EditText
+        android:id="@+id/editText_notatka"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="108dp"
+        android:ems="10"
+        android:hint="Notatka"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText_powiadomienie"
+        app:layout_constraintStart_toStartOf="@+id/button_add" />
+
+</android.support.constraint.ConstraintLayout>
