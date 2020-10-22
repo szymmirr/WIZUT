@@ -13,3 +13,6 @@
 [submodule "S6/PADTM/Calendar-32b"]
 	path = S6/PADTM/Calendar-32b
 	url = https://github.com/szymmirr/Calendar-32b
+[submodule "S7/PD/ZUT-informatyka-obrona"]
+	path = S7/PD/ZUT-informatyka-obrona
+	url = https://github.com/TomaszWychocki/ZUT-informatyka-obrona

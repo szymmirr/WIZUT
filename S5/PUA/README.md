@@ -1,4 +1,4 @@
-# Programowalne Uk≥ady Automatyki
+# Programowalne Uk≈Çady Automatyki
 
 Niestety odradzam wybieranie tego przedmiotu obieralnego.
 
