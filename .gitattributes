@@ -45,6 +45,6 @@ S6/TPSI/Lab8/src/test/* linguist-generated
 S6/TPSI/Ogloszenia/src/test/* linguist-generated
 
 S3/SKiT/* linguist-documentation
-*example* linguist-documentation
+*example*.html linguist-documentation
 
 *.m linguist-language=MATLAB
