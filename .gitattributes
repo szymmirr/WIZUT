@@ -15,6 +15,8 @@ S6/AIWTD/Sklep/Sklep/Account/* linguist-vendored
 S6/AIWTD/Sklep/Sklep/App_Start/* linguist-vendored
 S6/AIWTD/Sklep/Sklep/Logic/* linguist-vendored
 *.fun linguist-vendored
+*.inl linguist-vendored
+*.hpp linguist-vendored
 
 stdafx.cpp linguist-generated
 *.h linguist-generated
